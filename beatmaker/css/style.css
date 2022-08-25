@@ -1,0 +1,110 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #222222;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sequencer-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sequencer-column:nth-child(4n-1) .sequencer-row {
+  background-color: #747474;
+}
+
+.sequencer-column .sequencer-row.active-row {
+  background-color: #afadad;
+}
+
+.sequencer-row {
+  background-color: #494949;
+  border: 1px solid #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 6px 2px;
+}
+
+.sequencer-row.seq-row-2.on {
+  background-color: #ff3ecf;
+}
+
+.sequencer-row.seq-row-5.on {
+  background-color: #f38c17;
+}
+
+.sequencer-row.seq-row-1.on {
+  background-color: #fdca40;
+}
+
+.sequencer-row.seq-row-3.on {
+  background-color: #85eb26;
+}
+
+.sequencer-row.seq-row-4.on {
+  background-color: #026af2;
+}
+
+.sequencer-row.seq-row-6.on {
+  background-color: #28bce9;
+}
+
+.seq-col-ini {
+  position: -webkit-sticky;
+  position: sticky;
+  padding-left: 10px;
+  left: 0;
+  background-color: #222222;
+}
+
+.seq-col-ini .sequencer-row {
+  width: 180px;
+}
+
+.active {
+  background-color: aquamarine;
+}
+
+.column-on {
+  background-color: #050505;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  margin: 5px;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #d3c546;
+  border: 1px solid #fff;
+}
+
+.controls {
+  text-align: right;
+  width: 80%;
+}
+/*# sourceMappingURL=style.css.map */

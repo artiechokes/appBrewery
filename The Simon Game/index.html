@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>The Simon Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">The Simon Game</h1>
+      <button class="btn">RULES</button>
+      <h2 class="level">Press A Key to Start</h2>
+      <div class="rules hide-show">
+        <p class="description">
+          Press Any Key to begin the Game. Simon will give the first signal.
+          Repeat the signal by pressing the same color.<br /><br />Simon will
+          duplicate the first signal and add one. Repeat these two signals by
+          pressing the same color, in order. Simon will duplicate these first
+          two signals and add one.<br /><br />Continue playing as long as you
+          can repeat each sequence correctly.<br /><br />If you fail to repeat a
+          sequence exactly, Simon responds with a "GAME OVER" sound. This means
+          you've lost, and the sequence of signals ends.
+        </p>
+      </div>
+      <div class="row">
+        <div id="green" class="game-pad green" type="button"></div>
+        <div id="red" class="game-pad red" type="button"></div>
+      </div>
+      <div class="row">
+        <div id="yellow" class="game-pad yellow" type="button"></div>
+        <div id="blue" class="game-pad blue" type="button"></div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/game-final.js"></script>
+  </body>
+</html>

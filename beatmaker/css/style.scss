@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(34, 34, 34);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.sequencer-column {
+  display: flex;
+  flex-direction: column;
+  &:nth-child(4n-1) {
+    .sequencer-row {
+      background-color: rgb(116, 116, 116);
+    }
+  }
+
+  .sequencer-row.active-row {
+    background-color: rgb(175, 173, 173);
+  }
+}
+
+.sequencer-row {
+  background-color: rgb(73, 73, 73);
+  border: 1px solid #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 6px 2px;
+
+  &.seq-row-2.on {
+    background-color: #ff3ecf;
+  }
+  &.seq-row-5.on {
+    background-color: #f38c17;
+  }
+  &.seq-row-1.on {
+    background-color: #fdca40;
+  }
+  &.seq-row-3.on {
+    background-color: #85eb26;
+  }
+  &.seq-row-4.on {
+    background-color: #026af2;
+  }
+  &.seq-row-6.on {
+    background-color: #28bce9;
+  }
+}
+
+.seq-col-ini {
+  position: sticky;
+  padding-left: 10px;
+  left: 0;
+  background-color: rgb(34, 34, 34);
+  .sequencer-row {
+    width: 180px;
+  }
+}
+
+.active {
+  background-color: aquamarine;
+}
+
+.column-on { 
+  background-color: rgb(5, 5, 5);
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  margin: 5px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: rgb(211, 197, 70);
+    border: 1px solid #fff;
+  }
+}
+
+.controls {
+  text-align: right;
+  width: 80%;
+}

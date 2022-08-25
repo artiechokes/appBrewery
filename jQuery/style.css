@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(66, 66, 66);
+}
+
+.big-title {
+    font-size: 10rem;
+    color: yellow;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.margin-20 {
+    margin: 20px;
+}
+
+
+button { 
+    padding: 5px;
+}
+ 
+.div-btn {
+        background: rgb(73, 119, 75);
+        color: aliceblue;
+        display: inline-block;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+    .see {
+        display: none;
+    }
