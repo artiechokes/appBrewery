@@ -11,6 +11,9 @@ body {
   display: flex;
   position: relative;
   justify-content: center;
+  width: 100%;
+  min-width: 100%;
+  overflow-x: auto;
 }
 
 .sequencer-column {
@@ -69,7 +72,7 @@ body {
   background-color: aquamarine;
 }
 
-.column-on { 
+.column-on {
   background-color: rgb(5, 5, 5);
 }
 

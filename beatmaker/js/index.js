@@ -2,6 +2,21 @@ let row, column;
 let bpm = 0.883333;
 let columnOne = $(".seq-col-ini .sequencer-row");
 
+window.addEventListener("resize", () => {
+  window.innerWidth < $(".container").width()
+    ? $(".container").css({
+        "justify-content": "flex-start",
+        //"min-width": "100%",
+        //"overflow-x": "scroll",
+      })
+    : $(".container").css({
+        "justify-content": "center",
+        //"min-width": "fit-content",
+
+        //"overflow-x": "none",
+      });
+});
+
 $(".seq-col-ini .sequencer-row").click(function () {
   $(".sequencer-row.active").removeClass("active on active-row");
   $(".active-row").removeClass("active active-row");
