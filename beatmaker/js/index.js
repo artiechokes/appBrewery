@@ -1,21 +1,14 @@
+let containerWidth;
 let row, column;
-let bpm = 0.883333;
 let columnOne = $(".seq-col-ini .sequencer-row");
+let bpm = 0.883333;
 
-window.addEventListener("resize", () => {
-  window.innerWidth < $(".container").width()
-    ? $(".container").css({
-        "justify-content": "flex-start",
-        //"min-width": "100%",
-        //"overflow-x": "scroll",
-      })
-    : $(".container").css({
-        "justify-content": "center",
-        //"min-width": "fit-content",
-
-        //"overflow-x": "none",
-      });
+window.addEventListener("load", () => {
+  getContainerWidth();
+  checkBoardOverflow();
 });
+
+window.addEventListener("resize", checkBoardOverflow);
 
 $(".seq-col-ini .sequencer-row").click(function () {
   $(".sequencer-row.active").removeClass("active on active-row");
@@ -40,9 +33,7 @@ $(".seq-col-ini .sequencer-row").click(function () {
   }
 });
 
-$(".sequencer-row").click(function () {
-  $(this).toggleClass("on");
-});
+$(".sequencer-row").click(onOffToggle);
 
 let drumPadOn;
 function start() {
@@ -83,9 +74,9 @@ function loopBeat() {
         )[j].classList[1];
         document.querySelectorAll(".column-on .sequencer-row.on")[j];
         document.querySelectorAll(".column-on .sequencer-row.on")[j];
-        const regex = /\d$/g;
-        const choosesooundArr = parseInt(selectedColumn.match(regex) - 1);
-        let sounded = new Audio(soundLink[choosesooundArr]);
+        let regex = /\d$/g;
+        const choosesoundArr = parseInt(selectedColumn.match(regex) - 1);
+        let sounded = new Audio(soundLink[choosesoundArr]);
         console.log(sounded);
         sounded.play();
 
@@ -109,3 +100,82 @@ stopBtn.click(() => {
   document.getElementById("video").pause();
   document.getElementById("video").currentTime = 0;
 });
+
+function checkBoardOverflow() {
+  window.innerWidth < containerWidth
+    ? $(".container").css({
+        "justify-content": "flex-start",
+      })
+    : $(".container").css({
+        "justify-content": "center",
+      });
+}
+
+function getContainerWidth() {
+  $(".container").css("width", "fit-content");
+  containerWidth = $(".container").outerWidth() + 15;
+  $(".container").css("width", "calc(100% - 20px)");
+}
+
+addSounds.click(() => {
+  let numberOfSounds = columnOne.length;
+  let numberOfNotes = $(".seq-col-ini").length - 2;
+
+  let regex = /\d+\son|\d+/;
+  let seqRow = $(".seq-col-ini .sequencer-row")[0].outerHTML.replace(
+    regex,
+    numberOfSounds + 1
+  );
+  console.log(typeof seqRow);
+  $(".sequencer-column").append(seqRow);
+
+  columnOne = $(".seq-col-ini .sequencer-row");
+
+  numberOfSounds = columnOne.length;
+  numberOfNotes = $(".seq-col-ini").length - 2;
+
+  $(".sequencer-row:last-child").click(onOffToggle);
+
+  $(".seq-col-mute .sequencer-row:last-child").append(
+    '<i class="fa-solid fa-volume-xmark"></i>'
+  );
+
+  $(".seq-col-mute .sequencer-row:last-child").addClass("mute-btn");
+});
+
+addFrames.click(() => {
+  for (let i = 1; i <= 4; i++) {
+    let numberOfSounds = columnOne.length;
+    let numberOfNotes = $(".sequencer-column").length - 2;
+
+    let regex = /[0-9]+ on|\d+/;
+    let seqColumn = $(".sequencer-column")[
+      $(".sequencer-column").length - 1
+    ].outerHTML.replace(regex, numberOfNotes + 1);
+
+    $(".container").append(seqColumn);
+
+    $(".sequencer-column:last-child .sequencer-row").each(function () {
+      $(this).removeClass("on");
+    });
+  }
+
+  getContainerWidth();
+  checkBoardOverflow();
+});
+
+// FUNCTIONS
+
+function onOffToggle() {
+  $(this).toggleClass("on");
+
+  if ($(this).is(".mute-btn.on") === true) {
+    $(this).children().removeClass("fa-volume-high");
+    $(this).children().addClass("fa-volume-xmark");
+  }
+
+  if ($(this).is(".mute-btn.on") === false) {
+    $(this).children().removeClass("fa-volume-xmark");
+    $(this).children().addClass("fa-volume-high");
+  }
+}

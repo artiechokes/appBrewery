@@ -1,11 +1,10 @@
 :root {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #010a11;
-  font-family: 'Train One', Geneva, Verdana, sans-serif;
+  background-color: rgb(1, 10, 17);
+  font-family: "Train One", Geneva, Verdana, sans-serif;
   color: #fff;
 }
 
@@ -22,14 +21,9 @@ h2 {
 }
 
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .row .game-pad {
   height: 300px;
   width: 300px;
@@ -40,7 +34,6 @@ h2 {
   background-color: #6fd66f;
   border-top-left-radius: 100%;
 }
-
 .green::after {
   border-top-left-radius: 100%;
 }
@@ -49,7 +42,6 @@ h2 {
   background-color: #f77a7a;
   border-top-right-radius: 100%;
 }
-
 .red::after {
   border-top-right-radius: 100%;
 }
@@ -58,7 +50,6 @@ h2 {
   background-color: #7373f3;
   border-bottom-right-radius: 100%;
 }
-
 .blue::after {
   border-bottom-right-radius: 100%;
 }
@@ -67,7 +58,6 @@ h2 {
   background-color: #ebeb65;
   border-bottom-left-radius: 100%;
 }
-
 .yellow::after {
   border-bottom-left-radius: 100%;
 }
@@ -75,46 +65,40 @@ h2 {
 .game-pad-click {
   opacity: 1;
 }
-
 .game-pad-click::after {
   border: 10px solid white;
-  content: '';
+  content: "";
   width: 300px;
   height: 300px;
   background-color: rgba(255, 255, 255, 0.432);
   display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .game-pad-lost {
   opacity: 1;
 }
-
 .game-pad-lost::after {
-  border: 10px solid #ff3131;
-  content: '';
+  border: 10px solid rgb(255, 49, 49);
+  content: "";
   width: 300px;
   height: 300px;
   background-color: rgba(255, 117, 117, 0.432);
   display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .answer {
   opacity: 1;
 }
-
 .answer::after {
-  border: 10px solid #31ff64;
-  content: '';
+  border: 10px solid rgb(49, 255, 100);
+  content: "";
   width: 300px;
   height: 300px;
   background-color: rgba(117, 255, 140, 0.432);
   display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 button {
@@ -130,9 +114,8 @@ button {
   width: 300px;
   border: none;
 }
-
 .audio:hover {
-  background-color: #056324;
+  background-color: rgb(5, 99, 36);
 }
 
 .unclickable {
@@ -142,7 +125,7 @@ button {
 .rules {
   width: 325px;
   position: absolute;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   text-align: justify;
   top: 300px;
@@ -159,7 +142,6 @@ button {
   border: none;
   border-radius: 5px;
 }
-
 .btn:hover {
   background-color: #7373f3;
   color: #fff;
@@ -167,5 +149,4 @@ button {
 
 .hide-show {
   display: block;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

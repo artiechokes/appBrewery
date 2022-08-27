@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="images/beats-icon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>BTS MKR</title>
     <link rel="stylesheet" href="css/style.min.css" />
@@ -26,12 +33,27 @@
         <div class="sequencer-row seq-row-6"></div>
       </div>
       <div class="sequencer-column seq-col-mute">
-        <div class="sequencer-row seq-row-1"></div>
-        <div class="sequencer-row seq-row-2"></div>
-        <div class="sequencer-row seq-row-3"></div>
-        <div class="sequencer-row seq-row-4"></div>
-        <div class="sequencer-row seq-row-5"></div>
-        <div class="sequencer-row seq-row-6"></div>
+        <div class="sequencer-row mute-btn seq-row-1">
+          <i class="fa-solid fa-volume-high center"></i>
+        </div>
+        <div class="sequencer-row mute-btn seq-row-2">
+          <i class="fa-solid fa-volume-high center"></i>
+        </div>
+        <div class="sequencer-row mute-btn seq-row-3">
+          <i class="fa-solid fa-volume-high center"></i>
+        </div>
+        <div class="sequencer-row mute-btn seq-row-4">
+          <i class="fa-solid fa-volume-high
+           center"></i>
+        </div>
+        <div class="sequencer-row mute-btn seq-row-5">
+          <i class="fa-solid fa-volume-high
+           center"></i>
+        </div>
+        <div class="sequencer-row mute-btn seq-row-6">
+          <i class="fa-solid fa-volume-high
+           center"></i>
+        </div>
       </div>
 
       <div class="sequencer-column seq-col-1">
@@ -167,12 +189,14 @@
     <video id="video" width="1080" height="480" loop controls="true">
       <source src="120bpm.mp4" type="video/mp4" />
     </video>
-    <input type="file" id="file-selector" multiple />
-    <br /><br /><br />
+    <div class="file-selectors">
+      <input type="file" id="file-selector" multiple />
+      <br /><br /><br />
 
-    <input id="fileContainer" type="file" />
-    <input id="show" type="button" value="Show" />
-    <div id="imgContainer"></div>
+      <input id="fileContainer" type="file" />
+      <input id="show" type="button" value="Show" />
+      <div id="imgContainer"></div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/playsound.js"></script>
