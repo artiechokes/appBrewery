@@ -1,3 +1,18 @@
+const soundLink = [
+  /*"beats/kick-bass.mp3",
+  "beats/snare.mp3",
+  "beats/crash.mp3",
+  "beats/tom-1.mp3",
+  "beats/tom-2.mp3",
+  "beats/tom-3.mp3",*/
+  "sounds/Clap (1) @jezzytheproducer.wav",
+  "sounds/Clap (2) @jezzytheproducer.wav",
+  "sounds/Clap (4) @jezzytheproducer.wav",
+  "sounds/Clap (4) @jezzytheproducer.wav",
+  "sounds/Kick (5) @jezzytheproducer.wav",
+  "sounds/Hihat (3) @jezzytheproducer.wav",
+];
+
 let containerWidth;
 let row, column;
 let columnOne = $(".seq-col-ini .sequencer-row");
@@ -63,7 +78,7 @@ playBtn.click(() => document.getElementById("video").play());
 
 function loopBeat() {
   for (let i = 2; i < $(".sequencer-column").length; i++) {
-    const columnInterval = setTimeout(() => {
+    const columnInterval = setTimeout( () => {
       column = document.querySelectorAll(".sequencer-column");
       row = document.querySelectorAll(".sequencer-row");
       column[i].classList.toggle("column-on");
@@ -85,9 +100,9 @@ function loopBeat() {
         //$(selectedClass).addClass("active-row");
       }
 
-      setTimeout(() => column[i].classList.toggle("column-on"), 80);
-      //console.log(column[i]);
-    }, 125 * (i - 1));
+        setTimeout(() => column[i].classList.toggle("column-on"), 80);
+        //console.log(column[i]);
+      }, 125 * (i - 1));    fd
 
     stopBtn.click(() => {
       clearInterval(columnInterval);
@@ -108,7 +123,7 @@ function checkBoardOverflow() {
       })
     : $(".container").css({
         "justify-content": "center",
-      });
+      }); 
 }
 
 function getContainerWidth() {
@@ -137,7 +152,7 @@ addSounds.click(() => {
   $(".sequencer-row:last-child").click(onOffToggle);
 
   $(".seq-col-mute .sequencer-row:last-child").append(
-    '<i class="fa-solid fa-volume-xmark"></i>'
+    '<i class="fa-solid fa-volume-xmark center"></i>'
   );
 
   $(".seq-col-mute .sequencer-row:last-child").addClass("mute-btn");

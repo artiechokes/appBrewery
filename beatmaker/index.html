@@ -15,15 +15,20 @@
 
     <title>BTS MKR</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/test.min.css" />
   </head>
   <body>
-    <div class="controls">
-      <button class="play">&#9658;</button>
-      <button class="stop">&#x25fe;</button>
-      <button class="add-frames">+</button>
+    <div class="test-container">
+      <button class="btn btn1">SND D</button
+      ><button class="btn btn2">PLAY</button
+      ><button class="btn btn3">SND 2</button>
     </div>
 
-    <div class="container">
+    <div class="controls hidden">
+      <button class="play">&#9658;</button><button class="stop">&#x25fe;</button
+      ><button class="add-frames">+</button>
+    </div>
+    <div class="container hidden">
       <div class="sequencer-column seq-col-ini">
         <div class="sequencer-row seq-row-1"></div>
         <div class="sequencer-row seq-row-2"></div>
@@ -43,16 +48,13 @@
           <i class="fa-solid fa-volume-high center"></i>
         </div>
         <div class="sequencer-row mute-btn seq-row-4">
-          <i class="fa-solid fa-volume-high
-           center"></i>
+          <i class="fa-solid fa-volume-high center"></i>
         </div>
         <div class="sequencer-row mute-btn seq-row-5">
-          <i class="fa-solid fa-volume-high
-           center"></i>
+          <i class="fa-solid fa-volume-high center"></i>
         </div>
         <div class="sequencer-row mute-btn seq-row-6">
-          <i class="fa-solid fa-volume-high
-           center"></i>
+          <i class="fa-solid fa-volume-high center"></i>
         </div>
       </div>
 
@@ -185,17 +187,19 @@
         <div class="sequencer-row seq-row-6"></div>
       </div>
     </div>
-    <button class="add-sounds">+</button>
-    <video id="video" width="1080" height="480" loop controls="true">
-      <source src="120bpm.mp4" type="video/mp4" />
-    </video>
-    <div class="file-selectors">
-      <input type="file" id="file-selector" multiple />
-      <br /><br /><br />
+    <div class="other hidden">
+      <button class="add-sounds">+</button>
+      <video id="video" width="1080" height="480" loop controls="true">
+        <source src="120bpm.mp4" type="video/mp4" />
+      </video>
+      <div class="file-selectors">
+        <input type="file" id="file-selector" multiple />
+        <br /><br /><br />
 
-      <input id="fileContainer" type="file" />
-      <input id="show" type="button" value="Show" />
-      <div id="imgContainer"></div>
+        <input id="fileContainer" type="file" />
+        <input id="show" type="button" value="Show" />
+        <div id="imgContainer"></div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

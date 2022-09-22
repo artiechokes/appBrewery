@@ -89,13 +89,21 @@ button:hover {
 }
 
 .controls {
-  text-align: right;
-  width: 80%;
-  position: fixed;
+  margin-top: 400px;
+  text-align: left;
+  width: 100%;
   top: 0;
   overflow: hidden;
   z-index: 1;
   background-color: #fff;
+}
+.controls button {
+  margin: 0;
+  border-radius: 0%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 40px;
+  border-style: solid;
 }
 
 video {
@@ -126,4 +134,13 @@ video {
   vertical-align: middle;
   font-size: 24px;
   width: 100%;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.hidden {
+  display: none;
+}
+
+/*
+
+
+*//*# sourceMappingURL=style.css.map */
