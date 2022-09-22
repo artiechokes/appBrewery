@@ -28,3 +28,5 @@ function addTodo(todo) {
     input.value = "";
   }
 }
+
+//https://gale.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12384340#overview
