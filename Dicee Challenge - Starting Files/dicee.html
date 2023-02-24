@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Dicee</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Refresh Me</h1>
 
-      <div class="dice">
-        <p>Player 1</p>
-        <img class="img1" src="images/dice6.png" />
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <title>Dicee</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet" />
+</head>
 
-      <div class="dice">
-        <p>Player 2</p>
-        <img class="img2" src="images/dice6.png" />
-      </div>
+<body>
+  <div class="container">
+    <h1>Refresh Me</h1>
+
+    <div class="dice">
+      <p>Player 1</p>
+      <img class="img1" src="images/dice-6.svg" />
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <div class="dice">
+      <p>Player 2</p>
+      <img class="img2" src="images/dice-6.svg" />
+    </div>
+  </div>
 
-  <footer>www 🎲 App Brewery 🎲 com</footer>  
+  <button class="roll-btn">ROLL</button>
+  <div class="dice-container">
+    <button class="roll-left"></button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+<footer>
+
+</footer>
+
 </html>

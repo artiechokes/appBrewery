@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(34, 34, 34);
+  margin: 0;
+
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: fit-content;
+  overflow-x: auto;
+  margin: 60px 10px 0 10px;
+  padding-bottom: 20px;
+}
+
+.sequencer-column {
+  display: flex;
+  flex-direction: column;
+  &:nth-child(4n-1) {
+    .sequencer-row {
+      background-color: rgb(116, 116, 116);
+      margin-left: 5px;
+    }
+  }
+
+  .sequencer-row.active-row {
+    background-color: rgb(175, 173, 173);
+  }
+}
+
+.sequencer-row {
+  background-color: rgba(255, 255, 255, 0.1);
+  //border: 1px solid #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 2px 2px;
+
+  &.on:nth-child(6n - 5) {
+    background-color: #fdca40;
+  }
+  &.on:nth-child(6n - 4) {
+    background-color: #ff3ecf;
+  }
+  &.on:nth-child(6n - 3) {
+    background-color: #85eb26;
+  }
+  &.on:nth-child(6n - 2) {
+    background-color: #f38c17;
+  }
+  &.on:nth-child(6n-1) {
+    background-color: #026af2;
+  }
+  &.on:nth-child(6n) {
+    background-color: #28bce9;
+  }
+}
+
+.seq-col-ini {
+  position: sticky;
+  left: 0;
+  background-color: rgb(34, 34, 34);
+  .sequencer-row {
+    width: 180px;
+  }
+}
+
+.active {
+  background-color: aquamarine;
+}
+
+.column-on {
+  background-color: rgb(5, 5, 5);
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  margin: 5px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: rgb(211, 197, 70);
+    border: 1px solid #fff;
+  }
+}
+
+.controls {
+  margin-top: 400px;
+  text-align: left;
+  width: 100%;
+  //position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #fff;
+
+  button {
+    margin: 0;
+    border-radius: 0%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    height: 40px;
+    border-style: solid;
+  }
+}
+video {
+  display: block;
+  width: 50vw;
+  height: auto;
+  margin: auto;
+  display: none;
+}
+
+.sequencer-column.seq-col-mute > .sequencer-row.on {
+  background-color: #fff;
+
+  i {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+.seq-col-mute {
+  position: sticky;
+  z-index: 1;
+  left: 184px;
+  background-color: rgb(34, 34, 34);
+}
+
+.center {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+  width: 100%;
+  //height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+/*
+   
+  */

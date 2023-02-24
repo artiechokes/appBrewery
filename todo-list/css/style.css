@@ -33,9 +33,6 @@ form {
 .input::-moz-placeholder {
   color: red;
 }
-.input:-ms-input-placeholder {
-  color: red;
-}
 .input::placeholder {
   color: red;
 }
