@@ -139,12 +139,7 @@ section.section-container {
     margin: 10px;
     margin-top: 40px;
   }
-  .flex-item {
-    position: relative;
-    width: calc(50% - 50px);
-    padding: 25px;
-    text-align: justify;
-  }
+
   .icon {
     text-align: center;
     font-size: 56px;
@@ -152,7 +147,7 @@ section.section-container {
     height: 130px;
 
     i {
-      border: 5px solid #000;
+      border: 5px solid #07960e;
       width: 130px;
       height: 130px;
       display: block;
@@ -170,16 +165,20 @@ section.section-container {
       }
     }
   }
+}
 
-  .icon.not {
-    i {
-      &:after {
-        content: "";
-        width: 100px;
-        height: 500px;
-        background-color: #4d0909;
-      }
-    }
+.icon.not {
+  i {
+    border: 5px solid #ff0000;
+  }
+  &::after {
+    content: "";
+    width: 140px;
+    height: 5px;
+    top: 50%;
+    transform: translate(-71px, -1px) rotate(45deg);
+    background-color: #ff0000;
+    position: absolute;
   }
 }
 
@@ -257,4 +256,102 @@ blockquote {
   background-color: #e9dcf8;
   padding: 15px;
   border-radius: 5px;
+}
+@media screen and (min-width: 1200px) {
+  .flex-item {
+    position: relative;
+    width: calc(25% - 50px);
+    padding: 25px;
+    text-align: justify;
+
+    &:nth-child(1) {
+      width: calc(50% - 50px);
+
+      .description,
+      .title {
+        margin: 40px 0 auto auto;
+        width: calc(50% - 25px);
+      }
+
+      i {
+        left: 75%;
+        top: 0;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    &:nth-child(2) {
+      width: calc(50% - 50px);
+
+      .description,
+      .title {
+        margin: 40px auto auto 0;
+        width: calc(50% - 25px);
+      }
+
+      i {
+        left: 25%;
+        top: 0;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .flex-item {
+    position: relative;
+    width: calc((100% / 3) - 50px);
+    padding: 25px;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.section-container {
+    padding: 25px;
+    padding-bottom: 50px;
+  }
+
+  .flex-container .flex-item {
+    text-align: center;
+    width: 50%;
+    padding: 25px 0 0 0;
+
+    .icon {
+      height: 80px;
+
+      i {
+        border-width: 2px;
+        font-size: 40px;
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .title {
+      font-size: 16px;
+      margin-top: 25px;
+
+      b {
+        font-weight: 400;
+      }
+    }
+  }
+  .description {
+    display: none;
+    p {
+      padding: 0px;
+    }
+  }
+
+  .icon.not {
+    &::after {
+      width: 80px;
+      height: 2px;
+      transform: translate(-41px, 0px) rotate(45deg);
+    }
+  }
+}
+
+.section-disciplines {
+  margin-bottom: 60px;
 }
