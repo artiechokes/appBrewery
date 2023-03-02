@@ -118,6 +118,10 @@ section.section-container li {
 section.section-container li {
   padding-bottom: 25px;
 }
+section.section-container .short-list li {
+  padding-bottom: 4px;
+  line-height: normal;
+}
 
 .flex-container {
   display: flex;
@@ -325,4 +329,25 @@ blockquote {
 }
 .section-disciplines {
   margin-bottom: 60px;
+}
+
+.field-guide {
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+.field-guide li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.red {
+  color: rgb(255, 0, 0);
+}
+
+.heading-list::marker {
+  font-size: 1.5em;
 }/*# sourceMappingURL=stylesheet.css.map */
