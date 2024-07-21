@@ -187,6 +187,7 @@ section.section-container {
   }
 }
 
+
 footer {
   background-color: var(--primary);
   color: #fff;
@@ -378,4 +379,9 @@ blockquote {
 
 .heading-list::marker {
   font-size: 1.5em;
+}
+
+.gold {
+  background-color: gold;
+  color: #3f3f3f;
 }
